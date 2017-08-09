@@ -1,0 +1,23 @@
+
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>myapp</title>
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="myapp.js"></script>
+</head>
+<body>
+<div ng-controller="MainCtrl" class="container">
+    <h1>Insert files</h1>
+    <input type="file" on-read-file="showContent($fileContent)" />
+    <div ng-if="content">
+      
+        <h2>File has:</h2>
+        
+        <pre>{{ content }}</pre>
+        
+    </div>
+  </div>
+</body>
+</html>
