@@ -17,7 +17,7 @@ import com.sun.jersey.multipart.FormDataParam;
 public class UploadFileService {
 
 	
-	
+	// teja commit 1
 	// kishan commit 2
 	@POST
 	@Path("/upload")
@@ -25,9 +25,9 @@ public class UploadFileService {
 	public Response uploadFile(
 		@FormDataParam("file") InputStream uploadedInputStream,
 		@FormDataParam("file") FormDataContentDisposition fileDetail) {
-
+System.out.println("teja commit 1");
 		String uploadedFileLocation = " NAME" + fileDetail.getFileName();
-
+		
 		// save it
 		writeToFile(uploadedInputStream, uploadedFileLocation);
 
